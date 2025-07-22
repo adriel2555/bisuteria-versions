@@ -1,0 +1,246 @@
+/* Filtros de productos */
+.filtros-productos {
+    background-color: #f9f9f9;
+    padding: 30px 5%;
+}
+
+.contenedor-filtros h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.controles-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.grupo-filtro {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-filtro label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.grupo-filtro select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+
+.buscador {
+    display: flex;
+    margin-left: auto;
+}
+
+.buscador input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    width: 250px;
+}
+
+.buscador button {
+    padding: 8px 15px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buscador button:hover {
+    background-color: #732d91;
+}
+
+/* Lista de productos */
+.lista-productos {
+    padding: 40px 5%;
+}
+
+.rejilla-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.tarjeta-producto {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-producto {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.tarjeta-producto:hover .imagen-producto img {
+    transform: scale(1.05);
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f1c40f;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.info-producto {
+    padding: 20px;
+}
+
+.info-producto h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.descripcion-producto {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.precio-producto {
+    margin-bottom: 15px;
+}
+
+.precio-actual {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+.precio-anterior {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+.boton-agregar-carrito {
+    width: 100%;
+    padding: 10px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton-agregar-carrito:hover {
+    background-color: #732d91;
+}
+
+/* Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.paginacion button,
+.paginacion a {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.paginacion button:disabled {
+    background-color: #eee;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.paginacion a:hover,
+.paginacion button:not(:disabled):hover {
+    background-color: #8e44ad;
+    color: white;
+    border-color: #8e44ad;
+}
+
+.pagina-actual {
+    padding: 8px 15px;
+    background-color: #8e44ad;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Estilos mejorados para imágenes */
+.imagen-producto {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.imagen-producto img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover .imagen-producto img {
+    transform: scale(1.1);
+}
+
+/* Estilo para cuando falla la imagen */
+.imagen-producto .imagen-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6cbdf;
+    color: #4a148c;
+    font-weight: bold;
+}
+
+/* Estilo para botón deshabilitado */
+.boton-agregar-carrito.deshabilitado {
+    background-color: #cccccc !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.boton-agregar-carrito.deshabilitado:hover {
+    background-color: #cccccc !important;
+}

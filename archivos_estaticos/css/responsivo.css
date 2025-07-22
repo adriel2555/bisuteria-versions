@@ -1,0 +1,310 @@
+/* =================================================================== */
+/* ESTILOS RESPONSIVOS PARA TODAS LAS PÁGINAS                          */
+/* =================================================================== */
+
+/* ----- Pantallas Medianas (Tablets) - max-width: 1024px ----- */
+@media (max-width: 1024px) {
+
+    /* Ajustes generales */
+    .rejilla-productos,
+    .rejilla-categorias {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* Panel de administración */
+    .graficos-admin {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ----- Pantallas Pequeñas (Móviles y Tablets Verticales) - max-width: 768px ----- */
+@media (max-width: 768px) {
+
+    /* --- Encabezado --- */
+    header {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .contenedor-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+    .contenedor-logo h1 {
+        font-size: 1.8rem; /* Ajustamos el tamaño del título si es necesario */
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 10px; /* 15px vertical, 10px horizontal */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        /*
+         *  Calculamos el ancho para dos columnas.
+         *  Le restamos 5px que es la mitad del gap horizontal (10px / 2).
+         *  Esto asegura que dos elementos más su gap quepan perfectamente en una línea.
+        */
+        flex: 0 0 calc(50% - 5px);
+        text-align: center;
+        margin: 0; /* Reseteamos márgenes */
+    }
+    nav ul li a {
+        display: block; /* Ocupa todo el espacio de su LI padre */
+        padding: 10px 5px;
+        text-decoration: none;
+        color: white; /* Color base para los enlaces normales */
+        border-radius: 5px; /* Un borde redondeado sutil para todos */
+        transition: background-color 0.2s;
+    }
+    nav ul li a.enlace-autenticacion {
+        background-color: #8e44ad; /* Color del botón Iniciar Sesión */
+        color: white;
+    }
+     nav ul li a.enlace-carrito {
+        background-color: #f1c40f; /* Color del botón Carrito */
+        color: #333;
+    }
+    nav ul li a:not(.enlace-autenticacion):not(.enlace-carrito):hover {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+    .menu-usuario {
+       flex-basis: 100% !important; /* Hacemos que ocupe toda la fila si está logueado */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .menu-usuario .submenu {
+       /* Estilos para el submenú en móvil si es necesario */
+       position: static;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       background-color: transparent;
+       box-shadow: none;
+       padding-top: 10px;
+       gap: 10px;
+       width: 100%;
+    }
+
+    /* --- Página de Contacto --- */
+    .hero-contacto {
+        height: 30vh;
+    }
+
+    .hero-contacto h2 {
+        font-size: 2rem;
+    }
+
+    .hero-contacto p {
+        font-size: 1rem;
+    }
+
+    .informacion-contacto .contenedor-info {
+        display: flex;
+        /* Mantenemos flex para que las propiedades flex funcionen */
+        flex-direction: column;
+        /* Esta es la orden clave: apilar verticalmente */
+        align-items: center;
+        /* Centramos los elementos por si tienen anchos diferentes */
+        gap: 40px;
+    }
+
+    .contenedor-info .info,
+    .contenedor-info .formulario-contacto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .boton-enviar {
+        width: 100%;
+    }
+
+    /* Esta es la regla clave y única para apilar las columnas */
+    .contenedor-info {
+        flex-direction: column;
+        gap: 40px;
+        /* Un solo gap para el espacio vertical */
+    }
+
+    .info,
+    .formulario-contacto {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        /* Un padding consistente */
+        box-sizing: border-box;
+    }
+
+    .formulario-contacto .grupo-formulario {
+        width: 100%;
+    }
+
+    .mapa iframe,
+    .contenedor-mapa iframe {
+        height: 250px;
+    }
+
+    .registro-contacto .contenido-registro {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .boton-registro {
+        width: 100%;
+        max-width: 300px;
+        /* Evita que el botón sea demasiado ancho */
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* --- Página de productos --- */
+    .controles-filtros {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buscador {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .buscador input {
+        width: 100%;
+    }
+
+    .menu-usuario .submenu {
+        position: static;
+        /* El submenu ya no es absoluto */
+        display: block;
+        /* Siempre visible en móvil (o puedes manejarlo con JS) */
+        background-color: rgba(0, 0, 0, 0.1);
+        /* Un color de fondo para diferenciarlo */
+        box-shadow: none;
+        border-radius: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-usuario .submenu li a {
+        color: white;
+        /* Ajusta el color si es necesario */
+        font-weight: normal;
+    }
+
+    /* --- Página de carrito --- */
+    .resumen-carrito {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-lista {
+        display: none;
+    }
+
+    .item-carrito {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    .info-producto-carrito,
+    .precio-producto-carrito,
+    .cantidad-producto-carrito,
+    .total-producto-carrito {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info-producto-carrito {
+        flex-direction: column;
+    }
+
+    /* --- Panel de administración --- */
+    .sidebar-admin {
+        width: 70px;
+        overflow: hidden;
+    }
+
+    .logo-admin h2,
+    .logo-admin p,
+    .menu-admin li a span,
+    .cerrar-sesion-admin a span {
+        display: none;
+    }
+
+    .menu-admin li a,
+    .cerrar-sesion-admin a {
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .menu-admin li a img,
+    .cerrar-sesion-admin a img {
+        margin-right: 0;
+    }
+}
+
+
+/* ----- Pantallas muy pequeñas (Móviles Pequeños) - max-width: 480px ----- */
+@media (max-width: 480px) {
+
+    /* --- Hero section General --- */
+    .hero {
+        height: 50vh;
+    }
+
+    .contenido-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .contenido-hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    /* --- Página de autenticación --- */
+    .formulario-autenticacion {
+        padding: 25px 15px;
+    }
+
+    /* --- Panel de administración --- */
+    .resumen-estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera-admin {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buscador-admin {
+        width: 100%;
+    }
+
+    .buscador-admin input {
+        width: 100%;
+    }
+
+    .tabla-pedidos {
+        display: block;
+        overflow-x: auto;
+    }
+}

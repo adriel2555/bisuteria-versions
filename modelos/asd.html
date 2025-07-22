@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Aranzábal</title>
+    <link rel="stylesheet" href="../../archivos_estaticos/css/estilos.css">
+    <link rel="stylesheet" href="../../archivos_estaticos/css/autenticacion.css">
+    <link rel="stylesheet" href="../../archivos_estaticos/css/responsivo.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img src="../../archivos_estaticos/img/diamanteblanco.png" alt="Joyitas Felices" class="logo">
+            <h1>Aranzábal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.php">Inicio</a></li>
+                <li><a href="../productos.php">Productos</a></li>
+                <li><a href="../nosotros.php">Nosotros</a></li>
+                <li><a href="../nosotros.php">Contacto</a></li>
+                <li><a href="iniciar-sesion.html" class="enlace-autenticacion">Iniciar Sesión</a></li>
+                <li><a href="../carrito/carrito.php" class="enlace-carrito">Carrito (<span id="contador-carrito">0</span>)</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-autenticacion">
+        <div class="formulario-autenticacion">
+            <h2>Crear una Cuenta</h2>
+            <form id="formulario-registro" action="../../controladores/procesar_registro.php" method="POST">
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="apellido">Apellido Completo</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="contrasena">Contraseña</label>
+                    <div class="input-con-icono">
+                        <input type="password" id="contrasena" name="contrasena" required>
+                        <span id="toggle-password" class="icono-ojo">&#128065;</span>
+                    </div>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="confirmarContrasena">Confirmar Contraseña</label>
+                    <div class="input-con-icono">
+                        <input type="password" id="confirmarContrasena" name="confirmarContrasena" required>
+                        <span id="toggle-confirm-password" class="icono-ojo">&#128065;</span>
+                    </div>
+                </div>
+                <div class="grupo-formulario acepto-terminos">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los <a href="terminos_y_condiciones.html">Términos y Condiciones</a> y
+                        la <a href="../configuracion/conexion.php">Política de Privacidad</a></label>
+                </div>
+                <button type="submit" class="boton-principal">Registrarse</button>
+            </form>
+            <div class="alternativa-autenticacion">
+                <p>¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión aquí</a></p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="info-contacto">
+                <h3>Contacto</h3>
+                <p>Calle Tupac Amaru 155-A, Mercado San Pedro,Cusco</p>
+                <p>Teléfono: 987 963 921</p>
+                <p>Gmail:</p>
+            </div>
+            <div class="enlaces-rapidos">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <h3>Síguenos</h3>
+                <div class="iconos-redes">
+                    <a href="#"><img src="img/iconfb.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/iconig.webp" alt="Instagram"></a>
+                    <a href="#"><img src="img/iconwsp.webp" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="derechos-autor">
+            <p>2025 Aranzábal. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/principal.js"></script>
+    <script src="js/autenticacion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+.contenedor-autenticacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 40px 5%;
+}
+
+.formulario-autenticacion {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.formulario-autenticacion h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus {
+    border-color: #8e44ad;
+    outline: none;
+}
+
+.enlace-olvido {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #8e44ad;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.enlace-olvido:hover {
+    text-decoration: underline;
+}
+
+.boton-principal {
+    width: 100%;
+    padding: 12px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: #732d91;
+}
+
+.alternativa-autenticacion {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.alternativa-autenticacion a {
+    color: #8e44ad;
+    text-decoration: none;
+}
+
+.alternativa-autenticacion a:hover {
+    text-decoration: underline;
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #999;
+}
+
+.separador::before, .separador::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separador span {
+    padding: 0 15px;
+}
+
+.redes-sociales-autenticacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boton-red-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.boton-red-social img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.boton-red-social.facebook {
+    color: #3b5998;
+    border-color: #3b5998;
+}
+
+.boton-red-social.facebook:hover {
+    background-color: rgba(59, 89, 152, 0.1);
+}
+
+.boton-red-social.google {
+    color: #db4437;
+    border-color: #db4437;
+}
+
+.boton-red-social.google:hover {
+    background-color: rgba(219, 68, 55, 0.1);
+}
+
+/* Estilos específicos para recuperación de contraseña */
+.instrucciones {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+}
+
+/* Mensaje de error */
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+}

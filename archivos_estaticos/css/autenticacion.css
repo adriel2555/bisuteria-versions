@@ -1,0 +1,203 @@
+body {
+    background: linear-gradient(to right, #ede7f6, #d1c4e9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a148c;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-autenticacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 4rem 2rem;
+}
+
+.formulario-autenticacion {
+    background: white;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(74, 20, 140, 0.15);
+    padding: 3rem 2.5rem;
+    max-width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.formulario-autenticacion:hover {
+    transform: scale(1.01);
+}
+
+.formulario-autenticacion h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #6a1b9a;
+    font-size: 2rem;
+}
+
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.grupo-formulario label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #512da8;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #d1c4e9;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus {
+    border-color: #7e57c2;
+    outline: none;
+}
+
+.enlace-olvido {
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #9575cd;
+    transition: color 0.3s;
+}
+
+.enlace-olvido:hover {
+    color: #5e35b1;
+    text-decoration: underline;
+}
+
+.boton-principal {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    padding: 0.9rem;
+    background-color: #7e57c2;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.boton-principal:hover {
+    background-color: #673ab7;
+}
+
+.alternativa-autenticacion {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #c08be0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.alternativa-autenticacion a {
+    color: #8e44ad;
+    text-decoration: none;
+}
+
+.alternativa-autenticacion a:hover {
+    text-decoration: underline;
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #999;
+}
+
+.separador::before, .separador::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separador span {
+    padding: 0 15px;
+}
+
+.redes-sociales-autenticacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boton-red-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.boton-red-social img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.boton-red-social.facebook {
+    color: #3b5998;
+    border-color: #3b5998;
+}
+
+.boton-red-social.facebook:hover {
+    background-color: rgba(59, 89, 152, 0.1);
+}
+
+.boton-red-social.google {
+    color: #db4437;
+    border-color: #db4437;
+}
+
+.boton-red-social.google:hover {
+    background-color: rgba(219, 68, 55, 0.1);
+}
+
+/*ojo autenticacion*/
+.input-con-icono {
+    position: relative;
+    width: 100%;
+}
+.input-con-icono input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 0.75rem; /* espacio para el icono a la derecha */
+    border: 1px solid #d1c4e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-con-icono input:focus {
+    border-color: #7e57c2;
+    outline: none;
+}
+
+.icono-ojo {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #7e57c2;
+    cursor: pointer;
+    user-select: none;
+}
